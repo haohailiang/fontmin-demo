@@ -1,8 +1,10 @@
 var Fontmin = require('fontmin');
 
-var srcPath = 'fonts/*.ttf'; // 字体源文件
+var srcPath = 'fonts/*.TTF'; // 字体源文件
 var destPath = 'asset/fonts';    // 输出路径
 var text = '我说你是人间的四月天；笑响点亮了四面风；轻灵在春的光艳中交舞着变。';
+var textArr = Array.from(new Set(text.split('')));
+text = textArr.join('');
 
 // 初始化
 var fontmin = new Fontmin()
